@@ -9,6 +9,7 @@ export default function App() {
     <TodoContextProvider>
       <div className="container">
         {/* add-task bar starts here  */}
+        <h2 className="text-center m-2 mb-3">Welcome to Todo-website</h2>
         <AddTodo />
         {/* add-task bar ends here  */}
         <h3 className="mx-2 my-4">
