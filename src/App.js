@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import TodoContextProvider from "./context/todoContextProvider";
+import AddTodo from "./components/addTodo";
+import TodoList from "./components/todoList";
 
-function App() {
+export default function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <TodoContextProvider>
+      <div className="container">
+        {/* add-task bar starts here  */}
+        <AddTodo />
+        {/* add-task bar ends here  */}
+        <h3 className="mx-2 my-4">
+          <u>Todo List</u>
+        </h3>
+        {/* todoList starts here  */}
+        <TodoList />
+        {/* todoList ends here  */}
+      </div>
+    </TodoContextProvider>
+    
   );
 }
 
-export default App;
+
